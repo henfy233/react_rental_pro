@@ -1,14 +1,11 @@
 import React from 'react';
-import { createHashHistory } from 'history'
 
 
 import './index.less'
 
 function PubHeader (props) {
-  const history = createHashHistory({ window })
   const backToHome = () => {
-    history.go(-1)
-    // window.history.back()
+    window.history.back()
   }
   return (
     <div className='commonHeader'>

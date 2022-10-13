@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
+import SearchInput from '../SearchInput';
 import './index.less'
 
-function HeaderNav () {
+function HeaderNav (props) {
 
   return (
     <div id="home-header" className='clear-fix'>
       <div className="home-header-left float-left">
         <Link to={'/city'}>
-          <span>北京</span>
+          <span>{props.cityName}</span>
           <i className="icon-angle-down"></i>
         </Link>
       </div>
@@ -19,7 +20,7 @@ function HeaderNav () {
       <div className="home-header-middle">
         <div className="search-container">
           <i className="icon-search"></i>
-          <input type="text" />
+          <SearchInput />
         </div>
       </div>
     </div>
