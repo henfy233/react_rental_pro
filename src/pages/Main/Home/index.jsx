@@ -1,0 +1,22 @@
+import React from 'react';
+import HeaderNav from '../../../components/HeaderNav'
+import Swiper from '../../../components/Swiper'
+import HomeHotList from './HomeHotList';
+
+import Banner1 from '../../../assets/images/banner1.png'
+import Banner2 from '../../../assets/images/banner2.png'
+import Banner3 from '../../../assets/images/banner3.png'
+
+class Home extends React.Component {
+  render () {
+    return (
+      <div>
+        <HeaderNav />
+        <Swiper banners={[Banner1, Banner2, Banner3]} />
+        <HomeHotList />
+      </div>
+    )
+  }
+}
+
+export default Home
